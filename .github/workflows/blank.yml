@@ -34,5 +34,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo Secret Var: ${{ env.SECRET_VAR }} / ${{ secrets.SECRET_VAR }}
-          echo Public Var: ${{ env.PUBLIC_VAR }} / ${{ vars.PUBLIC_VAR }}
+          echo Secret Var: ${{ env.SECRET_VAR }} / ${{ secrets.SECRET_VAR }} / ${{ secrets.REPO_SECRET_VAR }}
+          echo Public Var: ${{ env.PUBLIC_VAR }} / ${{ vars.PUBLIC_VAR }} / ${{ vars.REPO_PUBLIC_VAR }}
