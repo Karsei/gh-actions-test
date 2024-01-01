@@ -13,6 +13,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  test_env: ${{ env.SECRET_VAR }}
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -34,5 +37,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo Secret Var: ${{ env.SECRET_VAR }} / ${{ secrets.SECRET_VAR }} / ${{ secrets.REPO_SECRET_VAR }}
+          echo Secret Var: ${{ env.SECRET_VAR }} / ${{ secrets.SECRET_VAR }} / ${{ secrets.REPO_SECRET_VAR }} / $test_env
           echo Public Var: ${{ env.PUBLIC_VAR }} / ${{ vars.PUBLIC_VAR }} / ${{ vars.REPO_PUBLIC_VAR }}
